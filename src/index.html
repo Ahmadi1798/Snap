@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="relative">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../images/favicon-32x32.png" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <script src="../js/script.js" defer></script>
+    <title>Snap</title>
+  </head>
+  <body>
+    <!-- Darkening the screen -->
+    <div class="" id="darken"></div>
+    <!-- Navbar -->
+    <navbar class="bg-White">
+      <div class="flex justify-between">
+        <!-- Header Container -->
+        <div class="flex items-center px-8 py-4">
+          <!-- Logo -->
+          <img src="../images/logo.svg" class="" alt="" />
+          <!-- Contents -->
+          <div class="hidden md:flex items-center md:ml-10 space-x-10">
+            <div class="relative group flex items-center space-x-1">
+              <a href="#" id="feature" class="text-Gray group-active:text-Black"
+                >Features</a
+              >
+              <!-- arrow up -->
+              <div class="hidden" id="arrow-up_feature">
+                <img src="../images/icon-arrow-up.svg" height="10px" alt="" />
+              </div>
+              <!-- arrow down -->
+              <div class="block" id="arrow-down_feature">
+                <img src="../images/icon-arrow-down.svg" height="10px" alt="" />
+              </div>
+              <div
+                class="absolute hidden flex-col items-start space-y-1 top-10 right-0 pl-4 py-2 w-32 bg-White text-sm shadow-lg rounded-r-lg text-Black"
+                id="feature_menu"
+              >
+                <div class="flex items-center space-x-3">
+                  <img src="../images/icon-todo.svg" alt="" />
+                  <a href="">TodoList</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <img src="../images/icon-calendar.svg" alt="" />
+                  <a href="">Calender</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <img src="../images/icon-reminders.svg" alt="" />
+                  <a href=""> Reminders</a>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <img src="../images/icon-planning.svg" alt="" />
+                  <a href="">Planning</a>
+                </div>
+              </div>
+            </div>
+            <div class="relative group flex items-center space-x-1">
+              <a href="#" id="company" class="text-Gray group-active:text-Black"
+                >Company</a
+              >
+              <!-- arrow up -->
+              <div class="hidden" id="arrow-up_company">
+                <img src="../images/icon-arrow-up.svg" height="10px" alt="" />
+              </div>
+              <!-- arrow down -->
+              <div class="block" id="arrow-down_company">
+                <img src="../images/icon-arrow-down.svg" height="10px" alt="" />
+              </div>
+              <div
+                class="absolute hidden flex-col items-start text-sm justify-center shadow-lg rounded-lg pl-4 py-2 space-y-1 w-24 top-10 bg-White right-0"
+                id="company_menu"
+              >
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+              </div>
+            </div>
+            <a href="#" class="text-Gray active:text-Black">Careers</a>
+            <a href="#" class="text-Gray active:text-Black">About</a>
+          </div>
+        </div>
+        <!-- Login & Sign up -->
+        <div
+          class="hidden md:flex space-x-3 items-center justify-end py-4 px-4"
+        >
+          <a href="#" class="text-Gray active:text-Black">Login</a>
+          <button
+            class="py-1 px-4 rounded-xl text-Gray active:text-Black border border-Black"
+          >
+            Register
+          </button>
+        </div>
+        <!-- Hamburger Button -->
+        <div class="flex items-center md:hidden px-10">
+          <button
+            class="hamburger z-40 md:hidden"
+            id="menu-btn"
+            aria-label="Main Menu"
+          >
+            <svg width="50" height="50" viewBox="0 0 100 100">
+              <path
+                class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+              />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path
+                class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </navbar>
+    <!-- Mobile Menu -->
+    <div
+      id="menu"
+      class="absolute top-0 bottom-0 left-40 right-0 hidden flex-col self-end space-y-5 min-h-screen pl-10 pt-16 text-lg bg-White"
+    >
+      <div class="group flex items-center space-x-1">
+        <a
+          href="#"
+          id="feature_mobile"
+          class="text-Gray group-active:text-Black"
+          >Features</a
+        >
+        <!-- arrow up -->
+        <div class="hidden" id="arrow-up_feature_mobile">
+          <img src="../images/icon-arrow-up.svg" height="10px" alt="" />
+        </div>
+        <!-- arrow down -->
+        <div class="block" id="arrow-down_feature_mobile">
+          <img src="../images/icon-arrow-down.svg" height="10px" alt="" />
+        </div>
+      </div>
+      <div
+        class="hidden flex-col items-start space-y-1 pl-4 w-32 bg-transparent text-sm text-Black"
+        id="feature-menu_mobile"
+      >
+        <div class="flex items-center space-x-3">
+          <img src="../images/icon-todo.svg" alt="" />
+          <a href="">TodoList</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <img src="../images/icon-calendar.svg" alt="" />
+          <a href="">Calender</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <img src="../images/icon-reminders.svg" alt="" />
+          <a href=""> Reminders</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <img src="../images/icon-planning.svg" alt="" />
+          <a href="">Planning</a>
+        </div>
+      </div>
+      <div class="group flex items-center space-x-1">
+        <a
+          href="#"
+          id="company_mobile"
+          class="text-Gray group-active:text-Black"
+          >Company</a
+        >
+        <!-- arrow up -->
+        <div class="hidden" id="arrow-up_company_mobile">
+          <img src="../images/icon-arrow-up.svg" height="10px" alt="" />
+        </div>
+        <!-- arrow down -->
+        <div class="block" id="arrow-down_company_mobile">
+          <img src="../images/icon-arrow-down.svg" height="10px" alt="" />
+        </div>
+      </div>
+      <div
+        class="hidden flex-col items-start text-sm justify-center pl-6 space-y-1 w-24 bg-transparent"
+        id="company_menu_mobile"
+      >
+        <a href="#">History</a>
+        <a href="#">Our Team</a>
+        <a href="#">Blog</a>
+      </div>
+      <a href="#" class="text-Gray active:text-Black">Careers</a>
+      <a href="#" class="text-Gray active:text-Black">About</a>
+      <div class="flex flex-col space-y-5 items-center pr-5">
+        <a href="#" class="text-Gray active:text-Black">Login</a>
+        <button
+          class="py-1 px-4 w-full rounded-xl text-Gray active:text-Black border border-Black"
+        >
+          Register
+        </button>
+      </div>
+    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen p-0">
+      <!-- Hero Container -->
+      <div class="container mx-auto">
+        <div
+          class="flex flex-col items-center justify-center space-y-5 md:flex-row-reverse md:space-y-0 md:space-x-20 md:items-center md:justify-between"
+        >
+          <!-- Image Container -->
+          <div class="md:w-1/2 md:ml-20">
+            <!-- Desktop Image -->
+            <div class="hidden md:block">
+              <img src="../images/image-hero-desktop.png" alt="" />
+            </div>
+            <!-- Mobile Image -->
+            <div class="md:hidden block">
+              <img src="../images/image-hero-mobile.png" alt="" />
+            </div>
+          </div>
+          <!-- Content -->
+          <div
+            class="flex flex-col text-center md:text-left md:w-1/2 md:space-y-10 md:pt-[6.5rem]"
+          >
+            <div class="p-4 text-4xl md:text-6xl md:p-0">
+              <h1 class="font-bold text-Black">
+                Make <span class="md:block">remote work</span>
+              </h1>
+            </div>
+            <div class="px-4 text-center md:p-0 md:text-left">
+              <p class="text-Gray text-[1rem]">
+                Get your team in sync, no matter your location, Streamline
+                processes, create team ritual, and watch productivity soar
+              </p>
+            </div>
+            <!-- Button -->
+            <div
+              class="flex items-center justify-center md:justify-start mt-5 mb-5"
+            >
+              <a
+                href="#"
+                class="px-6 py-3 text-White bg-Black rounded-lg border-Black border active:bg-transparent active:text-Black"
+                >learn more</a
+              >
+            </div>
+            <!-- footer -->
+            <div class="flex items-end">
+              <div
+                class="flex flex-row space-x-3 items-center md:mt-12 md:space-x-7"
+              >
+                <img src="../images/client-databiz.svg" alt="" />
+                <img src="../images/client-audiophile.svg" alt="" />
+                <img src="../images/client-meet.svg" alt="" />
+                <img src="../images/client-maker.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

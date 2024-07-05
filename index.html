@@ -196,59 +196,68 @@
       </div>
     </div>
     <!-- Hero Section -->
-    <section id="hero" class="h-screen p-0">
+    <section id="hero">
       <!-- Hero Container -->
-      <div class="container mx-auto">
+      <div
+        class="container mx-auto flex flex-col mt-5 md:mt-20 items-center justify-center md:flex-row-reverse md:justify-evenly"
+      >
+        <!-- Desktop Image -->
+        <div class="hidden md:block">
+          <img
+            src="./images/image-hero-desktop.png"
+            class="h-[42rem] w-[32rem]"
+            alt=""
+          />
+        </div>
+        <!-- Mobile Image -->
+        <div class="md:hidden block">
+          <img src="./images/image-hero-mobile.png" alt="" />
+        </div>
+
+        <!-- Content -->
         <div
-          class="flex flex-col items-center justify-center space-y-5 md:flex-row-reverse md:space-y-0 md:space-x-20 md:items-center md:justify-between"
+          class="flex flex-col justify-center md:text-left md:space-y-10 md:h-[42rem] md:w-[32rem] p-2 md:p-0"
         >
-          <!-- Image Container -->
-          <div class="md:w-1/2 md:ml-20">
-            <!-- Desktop Image -->
-            <div class="hidden md:block">
-              <img src="./images/image-hero-desktop.png" alt="" />
-            </div>
-            <!-- Mobile Image -->
-            <div class="md:hidden block">
-              <img src="./images/image-hero-mobile.png" alt="" />
-            </div>
+          <div class="p-4 text-3xl md:text-6xl md:p-0">
+            <h1 class="font-bold text-center md:text-left text-Black">
+              Make <span class="md:block">remote work</span>
+            </h1>
           </div>
-          <!-- Content -->
-          <div
-            class="flex flex-col text-center md:text-left md:w-1/2 md:space-y-10 md:pt-[6.5rem]"
-          >
-            <div class="p-4 text-4xl md:text-6xl md:p-0">
-              <h1 class="font-bold text-Black">
-                Make <span class="md:block">remote work</span>
-              </h1>
-            </div>
-            <div class="px-4 text-center md:p-0 md:text-left">
-              <p class="text-Gray text-[1rem]">
-                Get your team in sync, no matter your location, Streamline
-                processes, create team ritual, and watch productivity soar
-              </p>
-            </div>
-            <!-- Button -->
-            <div
-              class="flex items-center justify-center md:justify-start mt-5 mb-5"
+          <div class="px-4 text-center md:p-0 md:text-left">
+            <p class="text-Gray text-[1rem]">
+              Get your team in sync, no matter your location, Streamline
+              processes, create team ritual, and watch productivity soar
+            </p>
+          </div>
+          <!-- Button -->
+          <div class="flex justify-center md:justify-start mt-5 mb-5">
+            <a
+              href="#"
+              class="px-6 py-3 text-White bg-Black rounded-lg border-Black border active:bg-transparent active:text-Black"
+              >learn more</a
             >
-              <a
-                href="#"
-                class="px-6 py-3 text-White bg-Black rounded-lg border-Black border active:bg-transparent active:text-Black"
-                >learn more</a
-              >
-            </div>
-            <!-- footer -->
-            <div class="flex items-end">
-              <div
-                class="flex flex-row space-x-3 items-center md:mt-12 md:space-x-7"
-              >
-                <img src="./images/client-databiz.svg" alt="" />
-                <img src="./images/client-audiophile.svg" alt="" />
-                <img src="./images/client-meet.svg" alt="" />
-                <img src="./images/client-maker.svg" alt="" />
-              </div>
-            </div>
+          </div>
+          <!-- footer -->
+
+          <div
+            class="flex flex-row space-x-1 items-center md:mt-12 md:space-x-7"
+          >
+            <img
+              class="w-20 md:w-auto"
+              src="./images/client-databiz.svg"
+              alt=""
+            />
+            <img
+              class="w-20 md:w-auto"
+              src="./images/client-audiophile.svg"
+              alt=""
+            />
+            <img class="w-20 md:w-auto" src="./images/client-meet.svg" alt="" />
+            <img
+              class="w-20 md:w-auto"
+              src="./images/client-maker.svg"
+              alt=""
+            />
           </div>
         </div>
       </div>
